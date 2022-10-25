@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!DOCTYPE pedido [
+        <!ELEMENT pedido (destinatario, articulo, direccion, fechaEntrega)>
+        <!ELEMENT  destinatario (#PCDATA)>
+        <!ELEMENT  articulo (#PCDATA)>
+        <!ELEMENT  direccion (#PCDATA)>
+        <!ELEMENT  fechaEntrega (#PCDATA)>
+        ]>
+<pedido>
+    <destinatario>Juan Delgado Martinez</destinatario>
+    <articulo>Bicicleta Bianchi Oltre</articulo>
+    <direccion>Calle Reforma 423, tercer piso, letra A</direccion>
+    <fechaEntrega>2021-09-19</fechaEntrega>
+</pedido>

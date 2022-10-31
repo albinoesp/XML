@@ -80,14 +80,14 @@ public class Procesamiento extends DefaultHandler {
     public void endDocument() throws SAXException {
         // Se proceso todo el documento, imprimir resultado
         Set<Map.Entry<String, Double>> Estado = vEstado.entrySet();
-        Set<Map.Entry<String, Double>> Deps = vDepartamento.entrySet();
         System.out.println("-----Ventas por Estado-----");
         for (Map.Entry<String, Double> entry : Estado) {
             System.out.printf("%-15.15s $%,9.2f\n", entry.getKey(), entry.getValue());
         }
+        Set<Map.Entry<String, Double>> Deps = vDepartamento.entrySet();
         System.out.println("-----Ventas por Departamento-----");
         for(Map.Entry<String, Double> entry : Deps){
-            System.out.printf("%-15.15s $,9.2f\n", entry.getKey(), entry.getValue());
+           System.out.printf("%-15.15s $%,9.2f\n", entry.getKey(), entry.getValue());
         }
         System.out.printf("Ventas totales: $%,9.2f\n", totalSales);
     }
@@ -144,11 +144,11 @@ public class Procesamiento extends DefaultHandler {
                 vEstado.put(this.state, vs);
             }
             if (vDepartamento.containsKey(this.dept)) {
-                double sum = vDepartamento.get(this.dept);
+               double sum = vDepartamento.get(this.dept);
                 vDepartamento.put(this.dept, sum + vs);
             } else {
-                vEstado.put(this.dept, vs);
-            }
+                vDepartamento.put(this.dept, vs);
+           }
             totalSales = totalSales + vs;
             inSales = false;
         }

@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<!DOCTYPE carta [
+        <!ELEMENT carta (nombre, precio, descripcion, calorias)*>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT precio (#PCDATA)>
+        <!ELEMENT descripcion (#PCDATA)>
+        <!ELEMENT calorias (#PCDATA)>
+        ]>
+<carta>
+    <nombre>Gofres Belgas</nombre>
+    <precio>5.95</precio>
+    <descripcion>Dos de nuestros famosos Gofres belgas con abundante sirope</descripcion>
+    <calorias>650</calorias>
+    <nombre>Gofres Belgas con fresas</nombre>
+    <precio>7.95</precio>
+    <descripcion>Ligeros gofres belgas cubiertos de fresas y nata montada</descripcion>
+    <calorias>900</calorias>
+    <nombre>Gofres Belgas con frutas del bosque</nombre>
+    <precio>8.95</precio>
+    <descripcion>Ligeros gofres belgas cubiertos con frutas del bosque y nata montada</descripcion>
+    <calorias>900</calorias>
+    <nombre>Tostada Francesa</nombre>
+    <precio>4.50</precio>
+    <descripcion>Dos gruesas rebanadas de nuestro pan francés casero</descripcion>
+    <calorias>600</calorias>
+    <nombre>Desayuno de la casa</nombre>
+    <precio>6.95</precio>
+    <descripcion>Dos huevos, bacon o salchicha, tostada y patatas fritas</descripcion>
+    <calorias>950</calorias>
+</carta>
+

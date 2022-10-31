@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<documento>
+    <p>Mi primer documento XML</p>
+    <p>Comienza con la etiqueta &lt; documento &gt; </p>
+    <p>A continuación colocamos un elemento sin contenido</p>
+    <imagen img="imagen.gif"></imagen>
+</documento>

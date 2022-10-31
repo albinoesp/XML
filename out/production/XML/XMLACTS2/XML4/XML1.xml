@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE liga [
+        <!ELEMENT liga (equipo1, equipo2, ganador, fecha)>
+        <!ELEMENT equipo1 (goles)>
+        <!ELEMENT equipo2 (goles)>
+        <!ELEMENT ganador (#PCDATA)>
+        <!ELEMENT fecha (#PCDATA)>
+        <!ELEMENT goles (#PCDATA)>
+        ]>

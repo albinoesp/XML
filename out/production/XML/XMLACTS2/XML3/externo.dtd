@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE informe SYSTEM "interno.dtd">
+<informe>
+    <titulo>Ediciones Aranda</titulo>
+    <contenido>
+        <descripcion>informe de ventas para las regiones Norte, Centro y Sur</descripcion>
+        <fecha>30/09/2021</fecha>
+        <region>
+            <norte>
+                <trimestre>
+                    <uno>
+                        <libros_vendidos>24000</libros_vendidos>
+                    </uno>
+                    <dos>
+                        <libros_vendidos>38600</libros_vendidos>
+                    </dos>
+                    <tres>
+                        <libros_vendidos></libros_vendidos>
+                    </tres>
+                    <cuatro>
+                        <libros_vendidos></libros_vendidos>
+                    </cuatro>
+                </trimestre>
+            </norte>
+            <centro>
+                <trimestre>
+                    <uno>
+                        <libros_vendidos></libros_vendidos>
+                    </uno>
+                    <dos>
+                        <libros_vendidos>16080</libros_vendidos>
+                    </dos>
+                    <tres>
+                        <libros_vendidos>25000</libros_vendidos>
+                    </tres>
+                    <cuatro>
+                        <libros_vendidos>29000</libros_vendidos>
+                    </cuatro>
+                </trimestre>
+            </centro>
+            <sur>
+                <trimestre>
+                    <uno>
+                        <libros_vendidos>27000</libros_vendidos>
+                    </uno>
+                    <dos>
+                        <libros_vendidos>31400</libros_vendidos>
+                    </dos>
+                    <tres>
+                        <libros_vendidos>40100</libros_vendidos>
+                    </tres>
+                    <cuatro>
+                        <libros_vendidos>30000</libros_vendidos>
+                    </cuatro>
+                </trimestre>
+            </sur>
+        </region>
+    </contenido>
+</informe>
+

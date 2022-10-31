@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!DOCTYPE factura [
+        <!ELEMENT factura (bussines, billTo, shipTo, invoiceDetails, description)>
+        <!ELEMENT bussines (name, address, number, email, website)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT address (street, city, state, zipCode)>
+        <!ELEMENT street (#PCDATA)>
+        <!ELEMENT city (#PCDATA)>
+        <!ELEMENT state (#PCDATA)>
+        <!ELEMENT zipCode (#PCDATA)>
+        <!ELEMENT number (#PCDATA)>
+        <!ELEMENT email (#PCDATA)>
+        <!ELEMENT website (#PCDATA)>
+        <!ELEMENT billTo (clName, address)>
+        <!ELEMENT clName (#PCDATA)>
+        <!ELEMENT shipTo (clName, address)>
+        <!ELEMENT invoiceDetails (invNumber, invDate, terms)>
+        <!ELEMENT invNumber (#PCDATA)>
+        <!ELEMENT invDate (#PCDATA)>
+        <!ELEMENT terms (#PCDATA)>
+        <!ELEMENT description ((product|service), desc, hrs, rate, amount)*>
+        <!ELEMENT product (#PCDATA)>
+        <!ELEMENT service (#PCDATA)>
+        <!ELEMENT desc (#PCDATA)>
+        <!ELEMENT hrs (#PCDATA)>
+        <!ELEMENT rate (#PCDATA)>
+        <!ELEMENT amount (#PCDATA)>
+        ]>

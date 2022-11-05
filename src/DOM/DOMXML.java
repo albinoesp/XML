@@ -98,11 +98,14 @@ public class DOMXML {
                     area = width * height;
                     System.out.println("->Area: " + area);
                     dist = x - y;
-                    System.out.println("->Distancia x y: " + dist);
+                    if (dist < 0) //Cambiar a positivo la distancia
+                        System.out.println("->Distancia x y: " + dist * -1);
+                    else
+                        System.out.println("->Distancia x y: " + dist);
                 } else if (node.getNodeName() == "circle") {
                     perimetro = 2 * pi * r;
                     System.out.println("->Perimetro: " + perimetro);
-                    area = pi * Math.pow(r,2);
+                    area = pi * Math.pow(r, 2);
                     System.out.println("->Area: " + area);
                 }
             }

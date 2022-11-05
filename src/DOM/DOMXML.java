@@ -51,8 +51,10 @@ public class DOMXML {
 
     // Esta función se llama recursivamente
     private static void visitChildNodes(NodeList nList) {
-        int x = 0; //posición x de la recta
-        int y = 0; //posición y de la recta
+        int x1 = 0; //posición x1
+        int y1 = 0; //posición y1
+        int x2 = 0; //posición x1
+        int y2 = 0; //posición y1
         int height = 0; //alto
         int width = 0; //ancho
         double dist = 0; //distancia entre x y
@@ -77,13 +79,18 @@ public class DOMXML {
                                 height = Integer.parseInt(tempNode.getNodeValue());
                             if (tempNode.getNodeName() == "width") //guardar ancho
                                 width = Integer.parseInt(tempNode.getNodeValue());
-                            if (tempNode.getNodeName() == "x") //guardar x
-                                x = Integer.parseInt(tempNode.getNodeValue());
-                            if (tempNode.getNodeName() == "y") //guardar y
-                                y = Integer.parseInt(tempNode.getNodeValue());
                         } else if (node.getNodeName() == "circle") { //guardar atributos si corresponde a un circulo
                             if (tempNode.getNodeName() == "r") //Guardar radio
                                 r = Integer.parseInt(tempNode.getNodeValue());
+                        } else if (node.getNodeName() == "line") { //guardar valores de la linea
+                            if (tempNode.getNodeName() == "x1") //guardar x1
+                                x1 = Integer.parseInt(tempNode.getNodeValue());
+                            if (tempNode.getNodeName() == "x2") //guardar x2
+                                x2 = Integer.parseInt(tempNode.getNodeValue());
+                            if (tempNode.getNodeName() == "y1") //guardar y1
+                                y1 = Integer.parseInt(tempNode.getNodeValue());
+                            if (tempNode.getNodeName() == "y2") //guardar y2
+                                y2 = Integer.parseInt(tempNode.getNodeValue());
                         }
                     }
                     if (node.hasChildNodes()) {
@@ -97,16 +104,15 @@ public class DOMXML {
                     System.out.println("->Perimetro: " + perimetro);
                     area = width * height;
                     System.out.println("->Area: " + area);
-                    dist = x - y;
-                    if (dist < 0) //Cambiar a positivo la distancia si es negativa
-                        System.out.println("->Distancia x y: " + dist * -1);
-                    else
-                        System.out.println("->Distancia x y: " + dist);
+
                 } else if (node.getNodeName() == "circle") {
                     perimetro = 2 * pi * r;
                     System.out.println("->Perimetro: " + perimetro);
                     area = pi * Math.pow(r, 2);
                     System.out.println("->Area: " + area);
+                } else if (node.getNodeName() == "line") {
+                    dist = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+                    System.out.println("->Distancia: " + dist);
                 }
             }
         }

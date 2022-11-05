@@ -98,7 +98,7 @@ public class DOMXML {
                     area = width * height;
                     System.out.println("->Area: " + area);
                     dist = x - y;
-                    if (dist < 0) //Cambiar a positivo la distancia
+                    if (dist < 0) //Cambiar a positivo la distancia si es negativa
                         System.out.println("->Distancia x y: " + dist * -1);
                     else
                         System.out.println("->Distancia x y: " + dist);
